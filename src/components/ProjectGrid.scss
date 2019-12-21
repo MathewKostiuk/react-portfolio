@@ -1,0 +1,11 @@
+.project-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-gap: 3em;
+  width: 90vw;
+  margin: 1em auto 0;
+
+  @media(min-width:720px) {
+    grid-template-columns: 1fr 1fr;
+  }
+}
