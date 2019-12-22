@@ -5,7 +5,7 @@ export default function Project({
   image,
   title,
   description,
-  link
+  githubLink
 }) {
 
   return (
@@ -16,7 +16,7 @@ export default function Project({
 
       <h1 className="project__title">{title}</h1>
       <div className="project__description">{description}</div>
-      <a className="project__link" src={link} >GitHub</a>
+      <a className="project__github-link" href={githubLink} target="_blank" rel="noopener noreferrer">GitHub Link</a>
     </article>
   )
 }
