@@ -12,9 +12,6 @@ export default function ProjectGrid() {
       <Project />
       <Project />
       <Project />
-      <Project />
-      <Project />
-      <Project />
     </section>
   )
 }
