@@ -45,7 +45,10 @@ const data = {
 
 function App() {
   return (
+    <div className="grid">
       <ProjectGrid projects={data.projects} />
+    </div>
+
   );
 }
 
