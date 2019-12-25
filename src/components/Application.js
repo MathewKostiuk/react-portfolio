@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
 import './Application.scss';
 
@@ -6,7 +6,8 @@ import ProjectGrid from './ProjectGrid';
 import DesktopHeader from './DesktopHeader';
 import MobileHeader from './MobileHeader';
 
-import { checkViewportWidth } from '../helpers/checkViewport';
+import { isMobile } from '../helpers/checkViewport';
+
 
 const data = {
   projects: [
@@ -55,15 +56,24 @@ const data = {
   ]
 }
 
-const isMobile = checkViewportWidth() < 720 ? true : false;
+
 
 function App() {
+  const initialMobileCheck = isMobile();
+  const [isMobileViewport, setIsMobile] = useState(initialMobileCheck);
+
+  useEffect(() => {
+    window.addEventListener('resize', () => {
+      isMobile() ? setIsMobile(true) : setIsMobile(false);
+    })
+  })
+
   return (
     <>
-      {isMobile && (
+      {isMobileViewport && (
         <MobileHeader />
       )}
-      {!isMobile && (
+      {!isMobileViewport && (
         <DesktopHeader />
       )}
       <ProjectGrid projects={data.projects} />

@@ -11,7 +11,6 @@ export default function MobileHeader() {
   useEffect(() => {
     const viewportHeight = checkViewportHeight();
     const mobileNavigation = document.querySelector('.mobile-navigation')
-    console.log(mobileNavigation, viewportHeight);
     mobileNavigation.style.height = `${viewportHeight}px`;
   });
 

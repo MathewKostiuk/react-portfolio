@@ -5,3 +5,7 @@ export function checkViewportWidth() {
 export function checkViewportHeight() {
   return Math.max(document.documentElement.clientHeight, window.innerHeight || 0);
 }
+
+export function isMobile() {
+  return checkViewportWidth() < 720 ? true : false;
+}
