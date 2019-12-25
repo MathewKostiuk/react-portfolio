@@ -14,7 +14,6 @@ export default function DesktopHeader() {
         </h1>
       </div>
       <Navigation
-        isMobile={false}
       />
     </header>
   )

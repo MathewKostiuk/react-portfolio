@@ -22,4 +22,8 @@
   right: 0;
   width: 80vw;
   background: #D0F2F7;
+
+  &__open {
+    display: block;
+  }
 }
