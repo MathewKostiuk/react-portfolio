@@ -1,4 +1,4 @@
-.header {
+.desktop-header {
   display: flex;
   justify-content: space-between;
   height: 3em;
@@ -15,23 +15,6 @@
       font-size: 1.5em;
       font-weight: normal;
       margin: 1em;
-    }
-  }
-
-  &__navigation {
-    width: 500px;
-
-    ul {
-      display: flex;
-      align-items: center;
-      height: 100%;
-    }
-
-    li {
-      width: 152px;
-      text-align: center;
-      color: #479AA5;
-      font-size: 1.25em;
     }
   }
 }

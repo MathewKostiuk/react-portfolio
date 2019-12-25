@@ -3,7 +3,10 @@ import React from 'react';
 import './Application.scss';
 
 import ProjectGrid from './ProjectGrid';
-import Header from './Header';
+import DesktopHeader from './DesktopHeader';
+import MobileHeader from './MobileHeader';
+
+import { checkViewportWidth } from '../helpers/checkViewport';
 
 const data = {
   projects: [
@@ -52,10 +55,17 @@ const data = {
   ]
 }
 
+const isMobile = checkViewportWidth() < 720 ? true : false;
+
 function App() {
   return (
     <>
-      <Header />
+      {isMobile && (
+        <MobileHeader />
+      )}
+      {!isMobile && (
+        <DesktopHeader />
+      )}
       <ProjectGrid projects={data.projects} />
     </>
   );
