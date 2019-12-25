@@ -1,10 +1,19 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import './MobileHeader.scss';
+
+import { checkViewportHeight } from '../helpers/checkViewport';
 
 import Navigation from './Navigation';
 import MenuIcon from './MenuIcon';
 
 export default function MobileHeader() {
+
+  useEffect(() => {
+    const viewportHeight = checkViewportHeight();
+    const mobileNavigation = document.querySelector('.mobile-navigation')
+    console.log(mobileNavigation, viewportHeight);
+    mobileNavigation.style.height = `${viewportHeight}px`;
+  });
 
   return (
     <header className="mobile-header">
