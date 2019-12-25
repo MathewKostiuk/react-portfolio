@@ -14,17 +14,17 @@ const navClass = classNames({
   return (
     <nav className={navClass}>
       <ul>
-        <li>
+        <li className="menu-item">
           <a href="#work">
             Work
             </a>
         </li>
-        <li>
+        <li className="menu-item">
           <a href="#life">
             Life
             </a>
         </li>
-        <li>
+        <li className="menu-item">
           <a href="#balance">
             Balance
             </a>

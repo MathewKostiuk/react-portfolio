@@ -26,4 +26,14 @@
   &__open {
     display: block;
   }
+
+  .menu-item {
+    height: 3.5em;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #71BFCA;
+    color: #FBFEFF;
+  }
 }
