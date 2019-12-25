@@ -1,6 +1,9 @@
 import React from 'react';
+
 import './Application.scss';
+
 import ProjectGrid from './ProjectGrid';
+import Header from './Header';
 
 const data = {
   projects: [
@@ -51,10 +54,10 @@ const data = {
 
 function App() {
   return (
-    <div className="grid">
+    <>
+      <Header />
       <ProjectGrid projects={data.projects} />
-    </div>
-
+    </>
   );
 }
 

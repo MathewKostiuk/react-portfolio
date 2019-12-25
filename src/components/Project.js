@@ -14,7 +14,7 @@ export default function Project({
         <img className="project__image" src={image} alt="demo-project" />
       </figure>
 
-      <h1 className="project__title">{title}</h1>
+      <h3 className="project__title">{title}</h3>
       <div className="project__description">{description}</div>
       <a className="project__github-link" href={githubLink} target="_blank" rel="noopener noreferrer">GitHub Link</a>
     </article>
