@@ -1,11 +1,13 @@
 .mobile-header {
-  position: relative;
+  position: sticky;
+  top: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 3em;
   padding: 1em;
   background: #D0F2F7;
+  z-index: 1;
 
   &__logo {
     display: flex;

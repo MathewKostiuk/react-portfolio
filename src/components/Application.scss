@@ -4,3 +4,9 @@ body {
   background: #D0F2F7;
 }
 
+.main-content {
+
+  &__blurred {
+    filter: blur(0.1em);
+  }
+}

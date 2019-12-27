@@ -11,33 +11,42 @@ import CloseIcon from './CloseIcon';
 const OPEN = 'OPEN';
 const CLOSED = 'CLOSED';
 
-export default function MobileHeader() {
+export default function MobileHeader({ setIsBlurred }) {
 
   const { transition, mobileMenuIsOpen } = useVisualMode(CLOSED);
 
   useEffect(() => {
     const viewportHeight = checkViewportHeight();
     const mobileNavigation = document.querySelector('.mobile-navigation');
-    const mobileHeader = document.querySelector('.mobile-header')
+    const mobileHeader = document.querySelector('.mobile-header');
     mobileNavigation.style.height = `${viewportHeight}px`;
     mobileNavigation.style.top = `${mobileHeader.clientHeight}px`
-    console.log(mobileHeader);
   });
 
   function onOpen() {
     mobileMenuIsOpen === 'OPEN' ?
       transition(CLOSED) :
       transition(OPEN);
+      document.querySelector('.main-content').addEventListener('click', handleBodyClick);
+      setIsBlurred(true);
   }
 
   function onClose() {
     mobileMenuIsOpen === 'CLOSED' ?
       transition(OPEN) :
       transition(CLOSED);
+    document.querySelector('.main-content').removeEventListener('click', handleBodyClick);
+    setIsBlurred(false);
+  }
+
+  function handleBodyClick() {
+    transition(CLOSED);
+    document.querySelector('.main-content').removeEventListener('click', handleBodyClick);
+    setIsBlurred(false);
   }
 
   return (
-    <header className="mobile-header">
+    <header className="mobile-header no-blur">
       <div className="mobile-header__logo">
         <h1>
           Mathew Kostiuk

@@ -8,6 +8,7 @@ import MobileHeader from './MobileHeader';
 
 import { isMobile } from '../helpers/checkViewport';
 
+const classNames = require('classnames');
 
 const data = {
   projects: [
@@ -61,6 +62,12 @@ const data = {
 function App() {
   const initialMobileCheck = isMobile();
   const [isMobileViewport, setIsMobile] = useState(initialMobileCheck);
+  const [isBlurred, setIsBlurred] = useState(false);
+
+  const mainClass = classNames({
+    'main-content': true,
+    'main-content__blurred': isBlurred
+  });
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -71,12 +78,15 @@ function App() {
   return (
     <>
       {isMobileViewport && (
-        <MobileHeader />
+        <MobileHeader setIsBlurred={setIsBlurred} />
       )}
       {!isMobileViewport && (
         <DesktopHeader />
       )}
-      <ProjectGrid projects={data.projects} />
+      <div className={mainClass} >
+        <ProjectGrid projects={data.projects} />
+      </div>
+
     </>
   );
 }
