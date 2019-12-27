@@ -18,7 +18,7 @@
     color: #479AA5;
     font-size: 0.75em;
     position: absolute;
-    left: 0.9em;
+    left: 0.8em;
     top: 0.25em;
   }
 
@@ -33,12 +33,13 @@
 
   &__input-wrapper {
     position: relative;
-    margin: 2em auto;
+    margin: 1em auto;
     width: 80%;
   }
 
   #message {
-    height: 30em;
-    padding-top: 2em;
+    min-height: 25em;
+    padding-top: 1.5em;
+    font-family: inherit;
   }
 }
