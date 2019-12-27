@@ -5,6 +5,7 @@ import './Application.scss';
 import ProjectGrid from './ProjectGrid';
 import DesktopHeader from './DesktopHeader';
 import MobileHeader from './MobileHeader';
+import ContactForm from './ContactForm';
 
 import { isMobile } from '../helpers/checkViewport';
 
@@ -85,8 +86,8 @@ function App() {
       )}
       <div className={mainClass} >
         <ProjectGrid projects={data.projects} />
+        <ContactForm />
       </div>
-
     </>
   );
 }
