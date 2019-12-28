@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 .mobile-header {
   position: sticky;
   top: 0;
@@ -6,7 +8,7 @@
   justify-content: center;
   height: 3em;
   padding: 1em;
-  background: #D0F2F7;
+  background: $brand-colour;
   z-index: 1;
 
   &__logo {
@@ -17,7 +19,7 @@
     h1 {
       font-size: 1.75em;
       font-weight: normal;
-      color: #479AA5;
+      color: $light-shade;
     }
   }
 

@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 .desktop-navigation {
   width: 500px;
 
@@ -10,7 +12,7 @@
   li {
     width: 152px;
     text-align: center;
-    color: #479AA5;
+    color: $light-shade;
     font-size: 1.25em;
   }
 }
@@ -21,7 +23,7 @@
   top: 0;
   right: 0;
   width: 80vw;
-  background: #D0F2F7;
+  background: $brand-colour;
 
   &__open {
     display: block;
@@ -34,7 +36,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #71BFCA;
-    color: #FBFEFF;
+    background: $brand-colour;
+    color: $light-shade;
   }
 }

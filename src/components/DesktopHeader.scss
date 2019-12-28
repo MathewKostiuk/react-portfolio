@@ -1,3 +1,5 @@
+@import "../styles/variables.scss";
+
 .desktop-header {
   position: sticky;
   top: 0;
@@ -5,16 +7,16 @@
   display: flex;
   justify-content: space-between;
   height: 3em;
-  background-color: #FBFEFF;
+  background-color: $brand-colour;
 
   &__logo {
     display: flex;
     align-items: center;
     text-align: center;
-    background: #D0F2F7;
+    background: $brand-colour;
 
     h1 {
-      color: #479AA5;
+      color: $light-shade;
       font-size: 1.5em;
       font-weight: normal;
       margin: 1em;

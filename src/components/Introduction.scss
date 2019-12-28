@@ -1,20 +1,28 @@
+@import "../styles/variables.scss";
+
 .introduction {
   position: relative;
   height: 100vh;
   background-size: cover;
-  background-attachment: fixed;
+  background-color: $dark-shades;
 
   &__text {
     position: absolute;
-    bottom: 33%;
-    left: 1%;
-    height: 4em;
+    bottom: 50%;
+    left: 5%;
     display: flex;
     flex-flow: column nowrap;
     justify-content: space-between;
+    color: $light-shade;
 
     &__name, &__description {
       font-size: 2.5em;
     }
+  }
+
+  &__icon {
+    width: 30px;
+    height: auto;
+    margin-top: 0.5em;
   }
 }
