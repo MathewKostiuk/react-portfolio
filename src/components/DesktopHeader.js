@@ -8,11 +8,6 @@ export default function DesktopHeader() {
 
   return(
     <header className="desktop-header">
-      <div className="desktop-header__logo">
-        <h1>
-          Mathew Kostiuk
-        </h1>
-      </div>
       <Navigation
       />
     </header>

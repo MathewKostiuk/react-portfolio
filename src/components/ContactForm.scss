@@ -1,6 +1,8 @@
 @import '../styles/mixins.scss';
+@import '../styles/variables.scss';
 
 .contact-form {
+  background: $dark-shades;
   display: flex;
   background-attachment: fixed;
   flex-direction: column;
@@ -11,11 +13,14 @@
 
 
   &__form {
+    background-color: $light-shade;
+    padding: 1em;
+    border-radius: 5px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     @include breakpoints('medium') {
-      width: 50%;
+      width: 25%;
       margin: 0 auto;
     }
   }
@@ -23,7 +28,7 @@
   &__heading {
     text-align: center;
     margin: 1em 0;
-    color: #ffffff;
+    color: $light-shade;
     width: 100%;
     font-size: 2em;
     font-weight: normal;
@@ -31,36 +36,30 @@
 
   &__label {
     font-size: 0.7em;
-    color: #ffffff;
+    color: $brand-colour;
     position: absolute;
-    left: 14px;
-    top: 0.25em;
+    left: 0;
+    top: -1.25em;
 
   }
 
   &__input {
-    border-radius: 5px;
-    border: 1px solid #ebebeb;
-    opacity: 0.7;
-    padding: 14px;
+    box-shadow: none;
+    border: 0;
     line-height: 1.5;
     width: 100%;
+    background-image: linear-gradient(#9c27b0, #9c27b0), linear-gradient(#D2D2D2,
+  #D2D2D2);
+    background-size: 0 2px, 100% 1px;
+    background-repeat: no-repeat;
+    background-position: center bottom, center calc(100% - 1px);
+    background-color: transparent;
   }
 
   &__input-wrapper {
     position: relative;
     margin: 1em auto;
     width: 100%;
-
-    &:focus-within {
-      label {
-        color: #000000;
-      }
-
-      input, textarea {
-        opacity: 1;
-      }
-    }
   }
 
   &__submit {
@@ -71,14 +70,14 @@
     border: none;
 
     &:hover {
-      background-color: #FFFFFF;
+      background-color: $brand-colour;
+      color: $light-shade;
       opacity: 1;
     }
   }
 
   #message {
-    min-height: 25em;
-    padding: 14px;
+    min-height: 15em;
     font-family: inherit;
   }
 }

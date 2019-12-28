@@ -16,7 +16,7 @@ export default function ProjectGrid({ projects }) {
 
 
   return (
-    <section className="project-grid">
+    <section id='portfolio' className="project-grid">
       {mappedProjects}
     </section>
   )

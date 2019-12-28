@@ -21,8 +21,19 @@
   }
 
   &__icon {
-    width: 30px;
+    width: 50px;
     height: auto;
     margin-top: 0.5em;
+  }
+
+  &__links {
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: end;
+    justify-content: space-around;
+  }
+
+  &__link {
+    width: 50px;
   }
 }
