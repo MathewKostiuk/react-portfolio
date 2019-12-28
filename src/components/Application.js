@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 import './Application.scss';
 
+import Introduction from './Introduction';
 import ProjectGrid from './ProjectGrid';
 import DesktopHeader from './DesktopHeader';
 import MobileHeader from './MobileHeader';
@@ -84,10 +85,11 @@ function App() {
       {!isMobileViewport && (
         <DesktopHeader />
       )}
-      <div className={mainClass} >
+      <main className={mainClass} >
+        <Introduction />
         <ProjectGrid projects={data.projects} />
         <ContactForm />
-      </div>
+      </main>
     </>
   );
 }

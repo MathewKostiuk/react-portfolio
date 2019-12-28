@@ -7,8 +7,7 @@ export default function ContactForm() {
   useEffect(() => {
     const contactForm = document.querySelector('.contact-form');
     contactForm.style.backgroundImage = `url(/images/color-background.png)`;
-    console.log(contactForm.style.backgroundImage);
-  })
+  });
 
   return (
     <section className='contact-form'>
