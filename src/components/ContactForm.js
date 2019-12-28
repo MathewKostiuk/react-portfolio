@@ -12,7 +12,7 @@ export default function ContactForm() {
 
   return (
     <section className='contact-form'>
-      <h2 className='contact-form__heading'>Get in Touch!</h2>
+      <h2 className='contact-form__heading'>Let's work together</h2>
       <form className='contact-form__form'>
         <div className="contact-form__input-wrapper">
           <label htmlFor='name' className='contact-form__label'>Name</label>

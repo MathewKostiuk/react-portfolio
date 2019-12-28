@@ -28,6 +28,7 @@ export default function MobileHeader({ setIsBlurred }) {
       transition(CLOSED) :
       transition(OPEN);
       document.querySelector('.main-content').addEventListener('click', handleBodyClick);
+      document.body.style.overflow = 'hidden';
       setIsBlurred(true);
   }
 
@@ -37,12 +38,14 @@ export default function MobileHeader({ setIsBlurred }) {
       transition(CLOSED);
     document.querySelector('.main-content').removeEventListener('click', handleBodyClick);
     setIsBlurred(false);
+    document.body.style.overflow = 'auto';
   }
 
   function handleBodyClick() {
     transition(CLOSED);
     document.querySelector('.main-content').removeEventListener('click', handleBodyClick);
     setIsBlurred(false);
+    document.body.style.overflow = 'auto';
   }
 
   return (
