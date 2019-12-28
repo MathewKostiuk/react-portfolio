@@ -1,0 +1,12 @@
+@mixin breakpoints($breakpoint) {
+  @if $breakpoint == 'small' {
+    @media(max-width: 720px) {
+      @content;
+    }
+  }
+  @if $breakpoint == 'medium' {
+    @media(min-width: 720px) {
+      @content;
+    }
+  }
+}
