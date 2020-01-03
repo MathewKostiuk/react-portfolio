@@ -7,6 +7,7 @@ import ProjectGrid from './ProjectGrid';
 import DesktopHeader from './DesktopHeader';
 import MobileHeader from './MobileHeader';
 import ContactForm from './ContactForm';
+import Footer from './Footer';
 
 import { isMobile } from '../helpers/checkViewport';
 
@@ -90,6 +91,7 @@ function App() {
         <ProjectGrid projects={data.projects} />
         <ContactForm />
       </main>
+      <Footer />
     </>
   );
 }
