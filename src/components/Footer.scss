@@ -12,9 +12,13 @@
     display: inline-block;
     height: auto;
     margin: 0 1em;
+
+    svg:hover {
+      fill: $light-shade;
+    }
   }
 
   &__copyright {
-
+    font-size: 0.8em;
   }
 }
