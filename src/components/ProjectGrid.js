@@ -2,7 +2,11 @@ import React from 'react';
 import './ProjectGrid.scss';
 import Project from './Project';
 
+import useApplicationData from '../hooks/useApplicationData';
+
 export default function ProjectGrid({ projects }) {
+
+  useApplicationData();
 
   const mappedProjects = projects.map((project) => {
     return <Project
