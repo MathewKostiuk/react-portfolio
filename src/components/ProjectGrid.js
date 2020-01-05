@@ -10,6 +10,7 @@ export default function ProjectGrid({ projects }) {
       title={project.name}
       description={project.description}
       githubLink={project.github_url}
+      image={project.image_url}
     />
   })
 
