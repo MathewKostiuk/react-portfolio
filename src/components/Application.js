@@ -15,55 +15,6 @@ import useApplicationData from '../hooks/useApplicationData';
 
 const classNames = require('classnames');
 
-const data = {
-  projects: [
-    {
-      id: 1,
-      title: 'Scheduler',
-      image: '/images/scheduler.png',
-      description: 'A React application that uses Hooks and shows examples of TDD',
-      githubLink: 'https://github.com/MathewKostiuk/react-scheduler'
-    },
-    {
-      id: 2,
-      title: 'Lettuce Share',
-      image: '/images/lettuce-share.png',
-      description: 'Final project at Lighthouse Labs. Built using Ruby on Rails!',
-      githubLink: 'https://github.com/MathewKostiuk/final-project'
-    },
-    {
-      id: 3,
-      title: 'Tiny App',
-      image: '/images/tiny-app.png',
-      description: 'A URL shortner using Node & Express with bcrypt',
-      githubLink: 'https://github.com/MathewKostiuk/tiny-app'
-    },
-    {
-      id: 4,
-      title: 'Jungle',
-      image: '/images/jungle-rails.png',
-      description: 'An e-commerce website built on Ruby on Rails',
-      githubLink: 'https://github.com/MathewKostiuk/jungle-rails'
-    },
-    {
-      id: 5,
-      title: 'Map Share',
-      image: '/images/mapshare.png',
-      description: 'Lighthouse Labs mid-term project built using Node and Express while taking advantage of the Google Maps API',
-      githubLink: 'https://github.com/MathewKostiuk/mapshare-lhl-midterm'
-    },
-    {
-      id: 6,
-      title: 'Scheduler',
-      image: '/images/scheduler.png',
-      description: 'A React application that uses Hooks and shows examples of TDD',
-      githubLink: 'https://github.com/MathewKostiuk/react-scheduler'
-    }
-  ]
-}
-
-
-
 function App() {
   const initialMobileCheck = isMobile();
   const [isMobileViewport, setIsMobile] = useState(initialMobileCheck);
@@ -73,7 +24,8 @@ function App() {
     'main-content': true,
     'main-content__blurred': isBlurred
   });
-  useApplicationData();
+
+  const { state } = useApplicationData();
 
   useEffect(() => {
     window.addEventListener('resize', () => {
@@ -91,7 +43,7 @@ function App() {
       )}
       <main className={mainClass} >
         <Introduction />
-        <ProjectGrid projects={data.projects} />
+        <ProjectGrid projects={state.projects} />
         <ContactForm />
       </main>
       <Footer />

@@ -2,7 +2,6 @@ import React from 'react';
 import './Project.scss';
 
 export default function Project({
-  image,
   title,
   description,
   githubLink
@@ -11,7 +10,6 @@ export default function Project({
   return (
     <article className="project">
       <figure>
-        <img className="project__image" src={image} alt="demo-project" />
       </figure>
 
       <h3 className="project__title">{title}</h3>

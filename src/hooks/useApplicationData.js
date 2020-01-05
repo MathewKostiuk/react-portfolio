@@ -4,7 +4,7 @@ import axios from 'axios';
 export default function useApplicationData() {
 
   const initialState = {
-    projects: ''
+    projects: []
   }
 
   const SET_PROJECTS = 'SET_PROJECTS';
@@ -38,6 +38,6 @@ export default function useApplicationData() {
     getProjects();
   }, []);
 
-  return;
+  return { state };
 }
 
