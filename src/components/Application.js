@@ -11,6 +11,8 @@ import Footer from './Footer';
 
 import { isMobile } from '../helpers/checkViewport';
 
+import useApplicationData from '../hooks/useApplicationData';
+
 const classNames = require('classnames');
 
 const data = {
@@ -71,6 +73,7 @@ function App() {
     'main-content': true,
     'main-content__blurred': isBlurred
   });
+  useApplicationData();
 
   useEffect(() => {
     window.addEventListener('resize', () => {
