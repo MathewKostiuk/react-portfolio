@@ -25,7 +25,7 @@ export default function useApplicationData() {
     try {
       const response = await axios({
         method: 'get',
-        url: '/projects',
+        url: '/api/projects',
         responseType: 'json'
       });
       dispatch({ type: SET_PROJECTS, projects: response.data});
