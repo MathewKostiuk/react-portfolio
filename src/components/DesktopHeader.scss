@@ -7,19 +7,5 @@
   display: flex;
   justify-content: space-between;
   height: 3em;
-  background-color: $brand-colour;
-
-  &__logo {
-    display: flex;
-    align-items: center;
-    text-align: center;
-    background: $brand-colour;
-
-    h1 {
-      color: $light-shade;
-      font-size: 1.5em;
-      font-weight: normal;
-      margin: 1em;
-    }
-  }
+  background-color: $light-accent;
 }
