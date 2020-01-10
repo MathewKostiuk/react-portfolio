@@ -15,23 +15,18 @@ const navClass = classNames({
     <nav className={navClass}>
       <ul>
         <li className="menu-item">
-          <a href="#home">
-            Home
-            </a>
-        </li>
-        <li className="menu-item">
           <a href="#about">
             About
             </a>
         </li>
         <li className="menu-item">
-          <a href="#portfolio">
-            Portfolio
+          <a href="#journal">
+            Journal
             </a>
         </li>
         <li className="menu-item">
-          <a href="#contact">
-            Contact
+          <a href="#projects">
+            Projects
             </a>
         </li>
       </ul>
