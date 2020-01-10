@@ -1,7 +1,7 @@
 @import "../styles/variables.scss";
 
 .footer {
-  height: 10em;
+  grid-area: footer;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -9,7 +9,6 @@
 
   &__link {
     display: inline-block;
-    height: auto;
     margin: 0 1em;
 
     svg:hover {

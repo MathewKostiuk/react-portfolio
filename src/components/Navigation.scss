@@ -1,6 +1,8 @@
 @import "../styles/variables.scss";
 
 .desktop-navigation {
+  grid-area: navigation;
+
   ul {
     display: flex;
     align-items: center;
