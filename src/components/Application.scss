@@ -12,4 +12,13 @@
   "current-projects ."
   "past-projects ."
   ". footer";
+  color: $light-shade;
+
+  section {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  margin: auto;
+  line-height: 1.25em;
+  }
 }

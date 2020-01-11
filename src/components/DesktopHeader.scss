@@ -3,7 +3,7 @@
 .desktop-header {
   display: flex;
   justify-content: space-between;
-  font-family: 'Special Elite', cursive;
+  font-family: $heading-font;
   color: $light-shade;
   font-size: 1.25em;
   grid-area: name;

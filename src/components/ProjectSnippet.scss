@@ -1,7 +1,37 @@
+@import "../styles/variables.scss";
+
 .current-projects {
   grid-area: current-projects;
 }
 
 .past-projects {
   grid-area: past-projects;
+}
+
+.current-projects, .past-projects {
+  font-family: $heading-font;
+  h2 {
+    position: relative;
+    width: max-content;
+    font-size: 2em;
+    margin-bottom: 0.75em;
+
+    &::after {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: calc(100% + 0.5em);
+      background-color: #6B6869;
+      top: 8px;
+      left: -2px;
+      z-index: -1;
+    }
+  }
+  ul {
+    line-height: 2.5em;
+
+    li {
+      width: max-content;
+    }
+  }
 }

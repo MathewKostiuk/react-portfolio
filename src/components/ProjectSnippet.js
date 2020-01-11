@@ -9,15 +9,17 @@ export default function ProjectSnippet({
   return (
     <section className={ cssClass }>
       <h2>{ heading }</h2>
-      <p>
-        Pixel Union - Tier 2 Technical Support
-      </p>
-      <p>
-        Insert name of app I'm working on
-      </p>
-      <p>
-        Learning Japanese
-      </p>
+      <ul>
+        <li>
+          Pixel Union - Tier 2 Technical Support
+        </li>
+        <li>
+          Insert name of app I'm working on
+        </li>
+        <li>
+          Learning Japanese
+        </li>
+      </ul>
     </section>
   )
 }
