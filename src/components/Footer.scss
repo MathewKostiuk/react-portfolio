@@ -12,12 +12,15 @@
     display: flex;
     flex-direction: row;
     width: 100%;
-    justify-content: flex-end;
+    height: 100%;
+    justify-content: center;
 
     li {
       margin: 0 1em;
-      position: relative;
 
+      a {
+        position: relative;
+      }
       ::after {
         @include background-accent;
       }

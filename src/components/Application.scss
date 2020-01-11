@@ -15,12 +15,28 @@
   ". footer";
   color: $light-shade;
 
+  @media(max-width:720px) {
+    grid-template-columns: 1fr;
+    grid-template-rows: 10% 10% 20% auto auto 5%;
+    grid-template-areas:
+    "name"
+    "navigation"
+    "introduction"
+    "current-projects"
+    "past-projects"
+    "footer"
+  }
+
   section {
-  display: flex;
-  flex-direction: column;
-  width: 60%;
-  margin: auto;
-  line-height: 1.25em;
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+    margin: auto;
+    line-height: 1.25em;
+
+    @media(max-width:720px) {
+      width: 80%
+    }
   }
 }
 
