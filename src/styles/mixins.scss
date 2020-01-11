@@ -1,12 +1,10 @@
-@mixin breakpoints($breakpoint) {
-  @if $breakpoint == 'small' {
-    @media(max-width: 720px) {
-      @content;
-    }
-  }
-  @if $breakpoint == 'medium' {
-    @media(min-width: 720px) {
-      @content;
-    }
-  }
+@mixin background-accent {
+  content: '';
+  position: absolute;
+  height: 100%;
+  width: calc(100% + 0.5em);
+  background-color: #6B6869;
+  top: 8px;
+  left: -2px;
+  z-index: -1;
 }

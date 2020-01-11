@@ -1,7 +1,11 @@
 @import "../styles/variables.scss";
+@import "../styles/mixins.scss";
 
 .desktop-navigation {
   grid-area: navigation;
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
 
   ul {
     display: flex;
@@ -19,14 +23,9 @@
     }
 
     a::after {
-      position: absolute;
-      z-index: -1;
-      content: '';
-      width: calc(100% + 1em);
-      height: 100%;
-      top: -2px;
+      @include background-accent;
+      top: 1px;
       left: 0;
-      background-color: #6B6869;
     }
   }
 }
