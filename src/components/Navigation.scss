@@ -24,8 +24,6 @@
 
     a::after {
       @include background-accent;
-      top: 1px;
-      left: 0;
     }
   }
 }

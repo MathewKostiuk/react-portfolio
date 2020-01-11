@@ -1,4 +1,5 @@
 @import "../styles/variables.scss";
+@import "../styles/mixins.scss";
 
 .footer {
   grid-area: footer;
@@ -7,16 +8,20 @@
   justify-content: space-evenly;
   align-items: center;
 
-  &__link {
-    display: inline-block;
-    margin: 0 1em;
+  ul {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: flex-end;
 
-    svg:hover {
-      fill: $light-shade;
+    li {
+      margin: 0 1em;
+      position: relative;
+
+      ::after {
+        @include background-accent;
+      }
     }
   }
 
-  &__copyright {
-    font-size: 0.8em;
-  }
 }
