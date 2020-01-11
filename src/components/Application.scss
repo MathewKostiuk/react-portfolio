@@ -1,5 +1,6 @@
 @import '../styles/reset.scss';
 @import "../styles/variables.scss";
+@import "../styles/mixins.scss";
 
 .main-content {
   height: 100vh;
@@ -20,5 +21,16 @@
   width: 60%;
   margin: auto;
   line-height: 1.25em;
+  }
+}
+
+
+.accent {
+  position: relative;
+  &::after {
+    @include background-accent;
+    top: 0;
+    left: 0;
+    width: 100%;
   }
 }
