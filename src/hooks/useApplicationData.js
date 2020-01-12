@@ -42,6 +42,7 @@ export default function useApplicationData() {
         url: 'https://vast-sierra-75132.herokuapp.com/api/projects',
         responseType: 'json'
       });
+      console.log(response);
       dispatch({ type: SET_PROJECTS, projectData: response.data});
     } catch (error) {
       console.error(error);
