@@ -1,5 +1,6 @@
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
+axios.defaults.baseURL = 'https://vast-sierra-75132.herokuapp.com';
 
 export default function useApplicationData() {
 
@@ -39,7 +40,7 @@ export default function useApplicationData() {
     try {
       const response = await axios({
         method: 'get',
-        url: 'https://vast-sierra-75132.herokuapp.com/api/projects',
+        url: '/api/projects',
         responseType: 'json'
       });
       console.log(response);
