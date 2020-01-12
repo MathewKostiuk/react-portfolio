@@ -1,10 +1,10 @@
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 
-export default function useApplicationData() {
+export default function useApplicationData(data) {
 
   const initialState = {
-    projects: [],
+    projects: data,
     openProject: null
   }
 

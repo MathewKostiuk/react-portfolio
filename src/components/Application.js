@@ -14,15 +14,15 @@ import useApplicationData from '../hooks/useApplicationData';
 const classNames = require('classnames');
 
 const data = [{
-    'id': 1,
+    id: 1,
     name: 'Pixel Union'
   },
   {
-    'id': 2,
+    id: 2,
     name: 'Insert Name of App'
   },
   {
-    'id': 3,
+    id: 3,
     name: 'Learning Japanese'
   }
 ];
@@ -32,7 +32,9 @@ function App() {
     'main-content': true
   });
 
-  const { state, openProject } = useApplicationData();
+  const { state, openProject } = useApplicationData(data);
+
+  const currentlyOpenProject = state.projects.filter(project => project.id === state.openProject);
 
   return (
       <main className={mainClass} >
@@ -45,7 +47,9 @@ function App() {
         projects={data}
         openProject={openProject}/>
         {/* <Projects heading="Past Projects" cssClass="past-projects"/> */}
-        <ProjectCard />
+        { state.openProject && (
+          <ProjectCard />
+        )}
         <Footer />
       </main>
   );
