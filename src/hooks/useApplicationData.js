@@ -39,7 +39,7 @@ export default function useApplicationData() {
     try {
       const response = await axios({
         method: 'get',
-        url: '/api/projects',
+        url: 'https://vast-sierra-75132.herokuapp.com/api/projects',
         responseType: 'json'
       });
       dispatch({ type: SET_PROJECTS, projectData: response.data});
