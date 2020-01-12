@@ -4,14 +4,19 @@ import axios from 'axios';
 export default function useApplicationData() {
 
   const initialState = {
-    projects: []
+    projects: [],
+    openProject: null
   }
 
   const SET_PROJECTS = 'SET_PROJECTS';
+  const SET_OPEN_PROJECT = 'SET_OPEN_PROJECT';
 
   const reducers = {
     [SET_PROJECTS]: (state, { projects }) => {
       return { ...state, projects }
+    },
+    [SET_OPEN_PROJECT]: (state, { id }) => {
+      return { ...state, openProject: id }
     }
   };
 
@@ -34,10 +39,15 @@ export default function useApplicationData() {
     }
   }
 
+  const openProject = (id) => {
+    console.log('here', id);
+    dispatch({ type: SET_OPEN_PROJECT, id: id });
+  }
+
   useEffect(() => {
-    getProjects();
+    // getProjects();
   }, []);
 
-  return { state };
+  return { state, openProject };
 }
 
