@@ -9,13 +9,13 @@ export default function Footer() {
     <footer className='footer'>
       <ul>
         <li>
-          <a>Github</a>
+          <a href="https://github.com/MathewKostiuk" target="_blank" rel="noopener noreferrer">Github</a>
         </li>
         <li>
-          <a>LinkedIn</a>
+          <a href="https://www.linkedin.com/in/mathew-kostiuk-59403a147/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
         </li>
         <li>
-          <a>E-mail</a>
+          <a href="mailto:mathewkostiuk@gmail.com">E-mail</a>
         </li>
       </ul>
     </footer>
