@@ -15,15 +15,24 @@ const classNames = require('classnames');
 
 const data = [{
     id: 1,
-    name: 'Pixel Union'
+    name: 'Pixel Union',
+    position: 'Tier 2 Technical Support',
+    summary: 'Find & report bugs, fix bugs, commit bugs, repeat.',
+    technologies: 'Shopify Liquid, HTML, CSS, & JavaScript'
   },
   {
     id: 2,
-    name: 'Insert Name of App'
+    name: 'Insert Name of App',
+    position: 'Founder/CEO/CTO',
+    summary: 'A currenlty non-existant full-stack web-application',
+    technologies: 'All of the most modern bells and whistles on the block currently'
   },
   {
     id: 3,
-    name: 'Learning Japanese'
+    name: 'Learning Japanese',
+    position: '学生',
+    summary: 'Self-learning one of the hardest languages to learn as a native English speaker.',
+    technologies: 'Duolingo, Anki Decks, YouTube.'
   }
 ];
 
@@ -33,8 +42,6 @@ function App() {
   });
 
   const { state, openProject } = useApplicationData(data);
-
-  const currentlyOpenProject = state.projects.filter(project => project.id === state.openProject);
 
   return (
       <main className={mainClass} >
@@ -48,7 +55,13 @@ function App() {
         openProject={openProject}/>
         {/* <Projects heading="Past Projects" cssClass="past-projects"/> */}
         { state.openProject && (
-          <ProjectCard />
+          <ProjectCard
+          key={state.openProject[0].id}
+            name={state.openProject[0].name}
+            position={state.openProject[0].position}
+            summary={state.openProject[0].summary}
+            technologies={state.openProject[0].technologies}
+          />
         )}
         <Footer />
       </main>

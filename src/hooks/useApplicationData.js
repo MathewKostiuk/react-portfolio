@@ -16,7 +16,8 @@ export default function useApplicationData(data) {
       return { ...state, projects }
     },
     [SET_OPEN_PROJECT]: (state, { id }) => {
-      return { ...state, openProject: id }
+      const openProject = state.projects.filter(project => project.id === id);
+      return { ...state, openProject: openProject }
     }
   };
 
