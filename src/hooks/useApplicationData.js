@@ -1,6 +1,7 @@
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 axios.defaults.baseURL = 'https://vast-sierra-75132.herokuapp.com';
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
 
 export default function useApplicationData() {
 
