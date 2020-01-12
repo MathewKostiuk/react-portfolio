@@ -1,0 +1,29 @@
+@import "../styles/variables.scss";
+
+.project-card {
+  grid-area: project;
+  display: flex;
+  flex-direction: column;
+  margin: auto;
+  height: 100%;
+  width: 90%;
+  justify-content: space-between;
+  background-color: $light-shade;
+  color: $dark-shades;
+  padding: 2.5em;
+  font-family: $heading-font;
+  border: 1em solid $dark-accent;
+
+  h2, h3 {
+    text-align: center;
+  }
+
+  h2 {
+    font-size: 4em;
+  }
+
+  h3 {
+    font-size: 3em;
+    font-weight: 400;
+  }
+}

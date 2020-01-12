@@ -9,9 +9,9 @@
   grid-template-rows: 10% 20% auto auto 5%;
   grid-template-areas:
   "name navigation"
-  "introduction ."
-  "current-projects ."
-  "past-projects ."
+  "introduction project"
+  "current-projects project"
+  "past-projects project"
   ". footer";
   color: $light-shade;
 
