@@ -6,7 +6,7 @@ export default function ProjectCard({
   id,
   name,
   position,
-  summary,
+  description,
   technologies
 }) {
 
@@ -18,7 +18,7 @@ export default function ProjectCard({
       </div>
       <div className='project-card__details'>
         <h4>Summary:</h4>
-        <p>{summary}</p>
+        <p>{description}</p>
       </div>
       <div className='project-card__details'>
         <h4>Technologies:</h4>

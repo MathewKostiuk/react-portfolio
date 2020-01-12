@@ -1,10 +1,10 @@
 import { useEffect, useReducer } from 'react';
 import axios from 'axios';
 
-export default function useApplicationData(data) {
+export default function useApplicationData() {
 
   const initialState = {
-    projects: data,
+    projects: [],
     openProject: null
   }
 
@@ -12,11 +12,19 @@ export default function useApplicationData(data) {
   const SET_OPEN_PROJECT = 'SET_OPEN_PROJECT';
 
   const reducers = {
-    [SET_PROJECTS]: (state, { projects }) => {
+    [SET_PROJECTS]: (state, { projectData }) => {
+      const allProjects = projectData;
+      const currentProjects = projectData.filter(project => project.current === true);
+      const pastProjects = projectData.filter(project => project.current === false);
+      const projects = {
+        allProjects,
+        currentProjects,
+        pastProjects
+      }
       return { ...state, projects }
     },
     [SET_OPEN_PROJECT]: (state, { id }) => {
-      const openProject = state.projects.filter(project => project.id === id);
+      const openProject = state.projects.allProjects.filter(project => project.id === id);
       return { ...state, openProject: openProject }
     }
   };
@@ -34,19 +42,18 @@ export default function useApplicationData(data) {
         url: '/api/projects',
         responseType: 'json'
       });
-      dispatch({ type: SET_PROJECTS, projects: response.data});
+      dispatch({ type: SET_PROJECTS, projectData: response.data});
     } catch (error) {
       console.error(error);
     }
   }
 
   const openProject = (id) => {
-    console.log('here', id);
     dispatch({ type: SET_OPEN_PROJECT, id: id });
   }
 
   useEffect(() => {
-    // getProjects();
+    getProjects();
   }, []);
 
   return { state, openProject };
